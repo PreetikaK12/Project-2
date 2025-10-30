@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommender</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by genre, actor, director...">
+            <select id="moodSelect">
+                <option value="">Select Mood</option>
+                <option value="Happy">Happy</option>
+                <option value="Sad">Sad</option>
+                <option value="Excited">Excited</option>
+                <option value="Thoughtful">Thoughtful</option>
+                <option value="Scary">Scary</option>
+                <option value="Romantic">Romantic</option>
+                <option value="Energetic">Energetic</option>
+                <option value="Calm">Calm</option>
+                <option value="Adventurous">Adventurous</option>
+                <option value="Nostalgic">Nostalgic</option>
+                <option value="Intense">Intense</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Thrilling">Thrilling</option>
+                <option value="Empowering">Empowering</option>
+                <option value="Magical">Magical</option>
+                <option value="Funny">Funny</option>
+                <option value="Heartwarming">Heartwarming</option>
+                <option value="Rebellious">Rebellious</option>
+                <option value="Mysterious">Mysterious</option>
+                <option value="Fun">Fun</option>
+                <option value="Whimsical">Whimsical</option>
+                <option value="Intriguing">Intriguing</option>
+                <option value="Suspenseful">Suspenseful</option>
+                <option value="Dark">Dark</option>
+                <option value="Epic">Epic</option>
+                <option value="Mind-Bending">Mind-Bending</option>
+                <option value="Adrenaline-Fueled">Adrenaline-Fueled</option>
+                <option value="Tense">Tense</option>
+                <option value="Thought-Provoking">Thought-Provoking</option>
+            </select>
+            <button onclick="searchMovies()">Search</button>
+        </div>
+        <div id="results" class="movie-grid"></div>
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button onclick="previousPage()">Previous</button>
+            <span id="pageNumber">1</span>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    </div>
+    <!-- Load movieDatabase first -->
+    <script src="movies.js"></script>
+    <!-- Load Fuse.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
